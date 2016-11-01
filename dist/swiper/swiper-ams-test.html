@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <link href="//cdn.bootcss.com/Swiper/3.1.0/css/swiper.min.css" rel="stylesheet">
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                    recalc = function () {
+                        var clientWidth = docEl.clientWidth;
+                        if (!clientWidth) return;
+                        if(clientWidth>=640){
+                            docEl.style.fontSize = '100px';
+                        }else{
+                            docEl.style.fontSize = 100 * (clientWidth / 640) + 'px';
+                        }
+                    };
+
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
+
+    <style>
+        * {padding:0;margin:0;}
+        body { background-color:#eee;font-family:"Helvetica Neue",Helvetica,STHeiTi,sans-serif;}
+        .swiper-container a {display:block;}
+        .swiper-container {
+            width: 100%;
+        }
+        .swiper-container img {width:100%;}
+
+        .banner-list-wrapper {margin-top:-0.25rem;background-color:#fff;padding:0.25rem 0.125rem 0.125rem;border-bottom:1px dashed #ccc;}
+        .banner-list {overflow:hidden;}
+        .banner-list li {width:50%;float:left;list-style:none;margin-bottom:0.125rem;}
+        .banner-list li,.banner-list a{display:block;font-size:0;}
+        .banner-list li:nth-child(2n) a {margin-left:0.0625rem;}
+        .banner-list li:nth-child(2n+1) a{margin-right:0.0625rem;}
+        .banner-list img {width:100%;border-radius:10px;}
+
+        .coupon {display:block;margin:0.25rem 0.25rem 0;}
+        .coupon img {width:100%;}
+
+        .product-list-container {margin:0 0.25rem 0.25rem;background-color:#fff;border-radius:0.2rem 0.2rem 0 0;}
+        .product-list-container h3 {font-size:0.3rem;line-height:2.25;padding-left:0.25rem;font-weight:400;}
+        .product {overflow:hidden;}
+        .product li{float:left;list-style:none;width:49.5%;overflow:hidden;border-top:2px solid #ccc;position:relative;}
+        .product li:nth-child(2n) {border-left:1px solid #ccc;}
+        .product li:nth-child(2n+1) {border-right:1px solid #ccc;}
+        .product li a  {display:block;margin:.25rem .25rem 0;text-decoration:none;}
+        .product li .product_images {margin:0 0.25rem;}
+        .product li .product_images img {width:100%;}
+        .product li .product_title {font-size:0.125rem;color:#333;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;text-overflow:ellipsis;}
+        .product li .product-cost {font-size:0.5rem;height:0.5rem;margin-bottom:.25rem;}
+        .product li .product-cost b{display:block;font-size:0.25rem;margin-top:0.1rem;color:#FF9C00;font-weight:700;}
+        .product li .product-cost del {display:block;font-size:0.125rem;color:#aaa;}
+        .product .sale_icon_tag {position:absolute;right:0rem;top:0;z-index:99;color:#fff;font-size:0.355rem;}
+        .product .spotlight .sale_icon_tag .sale_font b {font-size:0.25rem;text-align:center;}
+        .more {display:block;margin:.2rem auto .6rem;width:2rem;height:.5rem;line-height:.5rem;text-align:center;}
+        .back-to-top{position:fixed;right:0;bottom:0;width:100px;height:100px;background:url('http://img.dxcdn.com/combo/mGlobal/v3.0.6/images/back_top.png') no-repeat;background-size:100%;}
+    </style>
+</head>
+<body>
+
+<section class="swiper-container swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <a href="javascript:;">
+                <img data-src="images/banner1.jpg" class="swiper-lazy" alt=""/>
+            </a>
+        </div>
+        <div class="swiper-slide">
+            <a href="javascript:;">
+                <img data-src="images/banner2.jpg" class="swiper-lazy" alt=""/>
+            </a>
+        </div>
+        <div class="swiper-slide">
+            <a href="javascript:;">
+                <img data-src="images/banner3.jpg" class="swiper-lazy" alt=""/>
+            </a>
+        </div>
+        <div class="swiper-slide">
+            <a href="javascript:;">
+                <img data-src="images/banner4.jpg" class="swiper-lazy" alt=""/>
+            </a>
+        </div>
+        <div class="swiper-slide">
+            <a href="javascript:;">
+                <img data-src="images/banner5.jpg" class="swiper-lazy" alt=""/>
+            </a>
+        </div>
+        <div class="swiper-slide">
+            <a href="javascript:;">
+                <img data-src="images/banner6.jpg" class="swiper-lazy" alt=""/>
+            </a>
+        </div>
+    </div>
+    <div class="swiper-pagination"></div>
+</section>
+<section class="banner-list-wrapper">
+    <ul class="banner-list">
+        <li><a href="##"><img class="swiper-lazy" src="images/list1.jpg" alt=""/></a></li>
+        <li><a href="##"><img class="swiper-lazy" src="images/list2.jpg" alt=""/></a></li>
+        <li><a href="##"><img class="swiper-lazy" src="images/list3.jpg" alt=""/></a></li>
+        <li><a href="##"><img class="swiper-lazy" src="images/list4.jpg" alt=""/></a></li>
+    </ul>
+</section>
+<section>
+    <a class="coupon" href="javascript:;">
+        <img src="images/coupon.png" alt=""/>
+    </a>
+</section>
+<section class="product-list-container swiper-container3">
+    <h3>Spotlight</h3>
+    <div class="product">
+        <ul class="spotlight_list clearfix" id="product-list">
+            <li>
+                <a href="javascript:;">
+                    <div class="product_images">
+                        <img src="images/p1.jpg" alt="">
+                    </div>
+                    <div class="product_title">
+                        Professional Oral Care Home Teeth Whitening Kit fo...</div>
+                    <div class="product-cost">
+                        <b>US$7.99</b>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <div class="product_images">
+                        <img src="images/p2.jpg" alt="">
+                    </div>
+                    <div class="product_title">
+                        1.1&quot; OLED Screen SPO2 / Heart Rate Monitor Fingert...</div>
+                    <div class="product-cost">
+                        <b>US$12.44</b>
+                        <del>US$26.80</del>
+                    </div>
+                </a>
+                <!-- sale tag(折扣的产品) -->
+                <div class="sale_icon_tag">
+                    <span class="glyphicon glyphicon-sale-icon"><span class="sale_font">54%<br />
+                    <b>OFF</b></span> </span>
+                </div>
+                <!-- end -->
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <div class="product_images">
+                        <img src="images/p3.jpg" alt="">
+                    </div>
+                    <div class="product_title">
+                        Yi 1/2.5&quot; CCD Wide Angle Camcorder CCTV w/ Wi-Fi, ...</div>
+                    <div class="product-cost">
+                        <b>US$48.99</b>
+                        <del>US$49.99</del>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <div class="product_images">
+                        <img src="images/p4.jpg" alt="">
+                    </div>
+                    <div class="product_title">
+                        55*60mm Pumping Line Bags Tea Filter Bag</div>
+                    <div class="product-cost">
+                        <b>US$4.39</b>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <div class="product_images">
+                        <img src="images/p5.jpg" alt="">
+                    </div>
+                    <div class="product_title">
+                        359 EF + F + M Nibs Calligraphy Pen Set</div>
+                    <div class="product-cost">
+                        <b>US$8.99</b>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <div class="product_images">
+                        <img src="images/p6.jpg" alt="">
+                    </div>
+                    <div class="product_title">
+                        720P, 1MP, Smart Phone Remote Monitoring, Wireless...</div>
+                    <div class="product-cost">
+                        <b>US$28.67</b>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <div class="product_images">
+                        <img src="images/p7.jpg" alt="">
+                    </div>
+                    <div class="product_title">
+                        Handheld 125KHz RFID ID Card Writer / Copier Dupli...</div>
+                    <div class="product-cost">
+                        <b>US$18.32</b>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <div class="product_images">
+                        <img src="images/p8.jpg" alt="">
+                    </div>
+                    <div class="product_title">
+                        Creative Convenient Kitchen Tool Small Scissors Ki...</div>
+                    <div class="product-cost">
+                        <b>US$7.99</b>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+</section>
+<section>
+    <input class="more" type="button" value="加载更多…"/>
+</section>
+<section>
+    <div class="back-to-top" href="#"></div>
+</section>
+
+<script src="//cdn.bootcss.com/zepto/1.1.4/zepto.min.js"></script>
+<script src="//cdn.bootcss.com/Swiper/3.1.0/js/swiper.min.js"></script>
+<script>
+    'use strict';
+    class Product {
+        constructor(){
+
+        }
+        render(){
+            this.getBanner();
+            this.getData();
+            this.goTop();
+
+        }
+        getBanner(){
+           new Swiper ('.swiper-container', {
+                direction: 'horizontal',
+                loop: true,
+                autoplay:5000,
+                autoplayDisableOnInteraction : false,
+                pagination : '.swiper-pagination',
+                lazyLoading : true,
+                lazyLoadingInPrevNext : true,
+            });
+        }
+        goTop(){
+            $('.back-to-top').on('click',function(){
+                $(window).scrollTop(0);
+            })
+        }
+        getData(){
+            var _self = this;
+            $('.more').on('click',_self.renderTemplate.bind(this));
+        }
+        renderTemplate(){
+            var str = '<li><a href="javascript:;"><div class="product_images"><img src="images/p9.jpg" alt=""></div><div class="product_title">LED Ceiling Light Voice Control Sensor 12W 24-SMD ...</div><div class="product-cost"><b>US$22.26</b></div></a></li><li><a href="javascript:;"><div class="product_images"><img src="images/p10.jpg" alt=""></div><div class="product_title">Wireless Smart 8W Dimmable 28-LED 600lm Light Bulb...</div><div class="product-cost"><b>US$22.99</b></div></a></li><li><a href="javascript:;"><div class="product_images"><img src="images/p11.jpg" alt=""></div><div class="product_title">Beam Distance: 280m, Waterproof Standard: IPX-8, I...</div><div class="product-cost"><b>US$129.95</b> <del class="product-cost">US$145.43</del></div></a> <div class="sale_icon_tag"><span class="glyphicon glyphicon-sale-icon"><span class="sale_font">11%<br><b>OFF</b></span></span></div></li><li><a href="javascript:;"><div class="product_images"><img src="images/p12.jpg" alt=""></div><div class="product_title">Mini LED 1000lm 5-Mode Cold White Light Flashlight...</div><div class="product-cost"><b>US$9.72</b> <del class="product-cost">US$14.77</del></div></a> <div class="sale_icon_tag"><span class="glyphicon glyphicon-sale-icon"><span class="sale_font">34%<br><b>OFF</b></span></span></div></li><li><a href="javascript:;"><div class="product_images"><img src="images/p13.jpg" alt=""></div><div class="product_title">G4 3W 300lm 48-3014SMD LED Warm White Light Bulb L...</div><div class="product-cost"><b>US$2.23</b></div></a></li><li><a href="javascript:;"><div class="product_images"><img src="images/p14.jpg" alt=""></div><div class="product_title">USB Powered Touch Control Eye-Protection 6-LED Rea...</div><div class="product-cost"><b>US$8.29</b> <del class="product-cost">US$9.34</del></div></a> <div class="sale_icon_tag"><span class="glyphicon glyphicon-sale-icon"><span class="sale_font">11%<br><b>OFF</b></span></span></div></li><li><a href="javascript:;"><div class="product_images"><img src="images/p15.jpg" alt=""></div><div class="product_title">Quad-Core, 1280*720, 4.7&quot; IPS, 8.0MP + 2.0MP Camer...</div><div class="product-cost"><b>US$159.99</b> <del class="product-cost">US$160.99</del></div></a></li><li><a href="javascript:;"><div class="product_images"><img src="images/p16.jpg" alt=""></div><div class="product_title">30W 5V 2.1A Multi-Port USB Charger w/ Indicators (...</div><div class="product-cost"><b>US$21.63</b></div></a></li>';
+
+        $('#product-list').append(str);
+        }
+    }
+    new Product().render();
+
+
+</script>
+</body>
+</html>

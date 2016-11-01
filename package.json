@@ -1,0 +1,25 @@
+{
+  "name": "sixstone",
+  "version": "1.0.5",
+  "description": "A simple comprehensive installation package (through the flexible use of the command to install the corresponding environment)",
+  "main": "bin/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "sixstone":"./bin/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/winterZhao/zhao.git"
+  },
+  "keywords": [
+    "zhao"
+  ],
+  "author": "zhaosixstone",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/winterZhao/zhao/issues"
+  },
+  "homepage": "https://github.com/winterZhao/zhao#readme"
+}
