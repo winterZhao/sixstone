@@ -1,6 +1,6 @@
 {
   "name": "sixstone",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "A simple comprehensive installation package (through the flexible use of the command to install the corresponding environment)",
   "main": "bin/index.js",
   "scripts": {
