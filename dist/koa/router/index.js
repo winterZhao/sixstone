@@ -1,9 +1,15 @@
-'use strict';
+
+
 const router = require('koa-router')();
 
-module.exports = function(app){
+module.exports = function(app) {
+
+
     router.get('/',function*(){
-        this.body = 'hello';
+        yield this.render('index.dust');
+    });
+    router.get('/a',function*(){
+        yield this.render('index.html');
     });
 
     app.use(router.routes())

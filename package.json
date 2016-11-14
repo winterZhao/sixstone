@@ -1,10 +1,11 @@
 {
   "name": "sixstone",
-  "version": "1.0.8",
+  "version": "1.0.14",
   "description": "A simple comprehensive installation package (through the flexible use of the command to install the corresponding environment)",
   "main": "bin/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint --fix bin lib sixstone-config.js"
   },
   "bin": {
     "sixstone": "./bin/index.js"
@@ -23,6 +24,7 @@
   },
   "homepage": "https://github.com/winterZhao/sixstone#readme",
   "dependencies": {
-    "commander": "2.9.0"
+    "commander": "2.9.0",
+    "eslint": "^3.9.1"
   }
 }

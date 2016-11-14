@@ -1,0 +1,54 @@
+*,*:before,*:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a {outline: none;}
+a:hover {
+    color: black;
+    text-decoration: none;
+}
+img {
+    border: none;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+.clearfix:before,
+.clearfix:after {
+    display: table;
+    line-height: 0;
+    content: "";
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.pull-left {
+    float: left;
+}
+.pull-right {
+    float: right;
+}
+.show {
+    display: block;
+}
+.hide {
+    display: none;
+}
+
+
+
+
+
+
+
+
+

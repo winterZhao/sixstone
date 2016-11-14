@@ -4,28 +4,25 @@
 
 const program = require('commander');
 const getConfig = require('../lib/config.js');
+const commanderConfig = require('../sixstone-config.js');
 
-program.version('0.0.1')
+program
+    .version('1.0.14')
     .usage('例子')
-    .description('This is an example！')
+    .description('This is an example！');
 
-program
-    .command('koa')
-    .action(function(folderName){
-        getConfig('koa',folderName);
-    });
 
-program
-    .command('mobile')
-    .action(function(folderName){
-        getConfig('mobile',folderName);
-    });
-
-program
-    .command('swiper')
-    .action(function(folderName){
-        getConfig('swiper',folderName);
-    });
+for ( let i = 0, r = commanderConfig.length; i < r; i++) {
+    var cur = commanderConfig[i];
+    (function(cur) {
+        program
+            .command(cur.command)
+            .description(cur.description)
+            .action(function(folderName) {
+                getConfig(cur.command, folderName);
+            });
+    })(cur);
+}
 
 
 program.parse(process.argv);
