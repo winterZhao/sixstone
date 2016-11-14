@@ -1,6 +1,6 @@
 # sixstone
 
-[中文]()
+[中文](./readme_Chinese.md)
 
 #### Description
     This is a package, the aim is through a number of simple commands to achieve the function of the rapid generation of directory structure,which is similar to the express-generator, koa-generator. In which I put a set of KOA document structure and a set of front-end gulp document structure. Of course, you can also use this package to build their own personalized DIY package, will be mentioned in the back.
