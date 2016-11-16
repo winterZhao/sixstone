@@ -34,8 +34,8 @@ MIT
 3.  Open the `sixstone-config.js` file, fill in your own configuration item;
 
         {
-            'command': 'express',                   //命令
-            'description': 'express-generator'  //命令描述;
+            'command': 'express',                   // command
+            'description': 'express-generator'      // description;
         }
 4. Open the `package.json`, modify the `bin` field;Can only change the name of the attribute
 
