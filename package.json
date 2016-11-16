@@ -15,7 +15,8 @@
     "url": "git+https://github.com/winterZhao/sixstone.git"
   },
   "keywords": [
-    "zhao"
+    "sixstone",
+    "generator"
   ],
   "author": "zhaosixstone",
   "license": "MIT",
