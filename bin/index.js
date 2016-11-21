@@ -4,28 +4,23 @@
 
 const program = require('commander');
 const getConfig = require('../lib/config.js');
-const commanderConfig = require('../sixstone-config.js');
+const commanderConfig = require('../conf/sixstone-config.js');
 
 program
-    .version('1.0.16')
-    .usage('例子')
-    .description('This is an example！');
+    .version('1.1.1')
+    .usage('sixstone')
+    .description('This is an example for generatoring all')
 
-
-for ( let i = 0, r = commanderConfig.length; i < r; i++) {
+for (let i = 0, r = commanderConfig.length; i < r; i++) {
     var cur = commanderConfig[i];
     (function(cur) {
         program
             .command(cur.command)
             .description(cur.description)
-            .action(function(folderName) {
-                getConfig(cur.command, folderName);
-            });
-    })(cur);
+            .action(function(folederName) {
+                getConfig(cur.command, folederName);
+            })
+    })(cur)
 }
 
-
 program.parse(process.argv);
-
-
-
