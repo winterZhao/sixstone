@@ -5,7 +5,7 @@
 
 #### Description
 
-  This is a package, the aim is through a number of simple commands to achieve the function of the rapid generation of directory structure,which is similar to the express-generator, koa-generator. In which I put a set of KOA document structure and a set of front-end gulp document structure. Of course, you can also use this package to build their own personalized DIY package, will
+  This is a package,which the aim is through a number of simple commands to achieve the function of the rapid generation of directory structure,which is similar to the express-generator, koa-generator. In which I put a set of KOA document structure and a set of front-end gulp document structure. Of course, you can also use this package to build their own personalized DIY package, will
 be mentioned in the back.
 
 ## Installation
@@ -32,7 +32,7 @@ MIT
         npm install;
 
 2.  Put your own directory structure in the `dist` folder; `express` as an example;
-3.  Open the `sixstone-config.js` file, fill in your own configuration item;
+3.  Open the `conf/sixstone-config.js` file, fill in your own configuration item;
 
         {
             'command': 'express',                   // command
