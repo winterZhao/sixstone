@@ -1,4 +1,5 @@
 # sixstone
+![图片](https://travis-ci.org/winterZhao/sixstone.svg?branch=master)
 
 [中文](./doc/readme_Chinese.md)
 
