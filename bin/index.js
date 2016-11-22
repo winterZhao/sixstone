@@ -7,7 +7,7 @@ const getConfig = require('../lib/config.js');
 const commanderConfig = require('../conf/sixstone-config.js');
 
 program
-    .version('1.1.1')
+    .version('1.1.2')
     .usage('sixstone')
     .description('This is an example for generatoring all')
 
