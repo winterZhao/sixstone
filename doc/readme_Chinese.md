@@ -30,7 +30,7 @@ MIT
         npm install;
 
 2.  将自己的目录结构放到`dist`文件夹下;这里以`express`为例;
-3.  打开`sixstone-config.js`文件，将自己的配置项填写进去;
+3.  打开`conf/sixstone-config.js`文件，将自己的配置项填写进去;
 
         {
             'command': 'express',                   //命令
