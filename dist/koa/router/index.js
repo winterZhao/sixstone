@@ -2,13 +2,13 @@
 
 const router = require('koa-router')();
 
-module.exports = function(app) {
+module.exports = function (app) {
 
 
-    router.get('/',function*(){
+    router.get('/', function*(){
         yield this.render('index.dust');
     });
-    router.get('/a',function*(){
+    router.get('/a', function*(){
         yield this.render('index.html');
     });
 

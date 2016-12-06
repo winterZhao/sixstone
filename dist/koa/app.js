@@ -19,13 +19,13 @@ app.use(Static(path.resolve(__filename, '../public'), {
 }));
 
 // 需要缓存
-//app.use(StaticCache(path.resolve(__dirname, 'public'), {
+// app.use(StaticCache(path.resolve(__dirname, 'public'), {
 //    maxAge: 24 * 60 * 60
-//}));
+// }));
 
 
 app.use(View(__dirname + '/views', {
-    default:'dust'
+    default: 'dust'
 }));
 
 

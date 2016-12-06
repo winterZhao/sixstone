@@ -11,16 +11,16 @@ const path = require('path');
 const getHtmlInnerCssJs = require('./get-css-js.js');
 
 
-module.exports = function(srcFile) {
-    const htmlFile = path.join(srcFile,'./layout');
+module.exports = function (srcFile) {
+    const htmlFile = path.join(srcFile, './layout');
     try {
         var arr = [];
         var files = fs.readdirSync(htmlFile);
         for (let i = 0, r = files.length; i < r; i++) {
             var obj = {};
             var curFile = files[i];
-            var curFilePath = path.join(htmlFile,curFile);
-            obj.fileName = path.basename(curFile,'.html');
+            var curFilePath = path.join(htmlFile, curFile);
+            obj.fileName = path.basename(curFile, '.html');
             obj.cssFileArr = getHtmlInnerCssJs(curFilePath).cssPathArr;
             obj.jsFileArr = getHtmlInnerCssJs(curFilePath).jsPathArr;
             arr.push(obj);

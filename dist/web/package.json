@@ -21,7 +21,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint --fix common source gulpfile.config.js gulpfile.js"
+    "eslint": "eslint --fix common source gulpfile.config.js gulpfile.js"
   },
   "author": "",
   "license": "MIT"

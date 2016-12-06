@@ -14,33 +14,33 @@ const linkReg = /href=\"(.+\.css)\"/g;
 const jsReg = /src=\"(.+\.js)\"/g;
 
 
-function execWhile(reg,str,filename) {
+function execWhile (reg, str, filename) {
     var arr = [];
-    function exec(reg,str) {
+    function exec (reg, str) {
         let regStrArr = reg.exec(str);
         if (regStrArr && regStrArr.length > 0) {
             var urlPath = regStrArr[1].trim();
             if (cdnReg.test(urlPath)) {
-                exec(reg,str);
+                exec(reg, str);
             } else {
-                regStrArr[1] = path.join(filename,'../../css/' + urlPath);
+                regStrArr[1] = path.join(filename, '../../css/' + urlPath);
                 arr.push(regStrArr[1]);
-                exec(reg,str);
+                exec(reg, str);
             }
 
         }
     }
-    exec(reg,str);
+    exec(reg, str);
     return arr;
 }
 
 
 
-module.exports = function(filename) {
+module.exports = function (filename) {
     try {
         var result = fs.readFileSync(filename);
-        var cssPathArr = execWhile(linkReg, result,filename);
-        var jsPathArr = execWhile(jsReg, result,filename);
+        var cssPathArr = execWhile(linkReg, result, filename);
+        var jsPathArr = execWhile(jsReg, result, filename);
 
         return {
             cssPathArr: cssPathArr,

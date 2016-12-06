@@ -7,7 +7,7 @@ const project = sequelize.define('nav', {
     gmt_create: Sequelize.DATEONLY,
     gmt_modified: Sequelize.DATEONLY,
     nav: Sequelize.STRING(40)
-},{
+}, {
     underscored: true,
     timestamps: false,
     createdAt: 'gmt_create',
